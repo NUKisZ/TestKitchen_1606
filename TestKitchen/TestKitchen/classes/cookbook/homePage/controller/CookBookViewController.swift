@@ -15,6 +15,18 @@ class CookBookViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.redColor()
+        createMyNav()
+    }
+    
+    func createMyNav(){
+        addNavBtn("saoyisao", target: self, action: #selector(scanAction), isLeft: true)
+        addNavBtn("search", target: self, action: #selector(searchAction), isLeft: false)
+    }
+    func scanAction(){
+        
+    }
+    func searchAction(){
+        
     }
 
     override func didReceiveMemoryWarning() {

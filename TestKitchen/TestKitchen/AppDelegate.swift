@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//导入第三方库
+import SnapKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
