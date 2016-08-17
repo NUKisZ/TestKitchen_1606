@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7346C4250D025A8A7337E7A9 /* Pods_TestKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9D83802A16100212F0DBEB /* Pods_TestKitchen.framework */; };
+		A74CD29F1D63FBBE0075F051 /* CBRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74CD29E1D63FBBE0075F051 /* CBRecommendView.swift */; };
+		A74CD2A21D63FF480075F051 /* CBRecommendADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74CD2A01D63FF480075F051 /* CBRecommendADCell.swift */; };
+		A74CD2A31D63FF480075F051 /* CBRecommendADCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74CD2A11D63FF480075F051 /* CBRecommendADCell.xib */; };
+		A74CD2A51D6407FC0075F051 /* UIImageView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74CD2A41D6407FC0075F051 /* UIImageView+Util.swift */; };
+		A74CD2A81D640A200075F051 /* sdefaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A74CD2A71D640A200075F051 /* sdefaultImage.png */; };
+		A74CD2AB1D64174E0075F051 /* CBRecommendLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74CD2A91D64174E0075F051 /* CBRecommendLikeCell.swift */; };
+		A74CD2AC1D64174E0075F051 /* CBRecommendLikeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74CD2AA1D64174E0075F051 /* CBRecommendLikeCell.xib */; };
 		A74E657B1D62A15B00DA290D /* community_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E65631D62A15B00DA290D /* community_normal@2x.png */; };
 		A74E657C1D62A15B00DA290D /* community_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E65641D62A15B00DA290D /* community_normal@3x.png */; };
 		A74E657D1D62A15B00DA290D /* community_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E65651D62A15B00DA290D /* community_select@2x.png */; };
@@ -96,6 +103,13 @@
 		4A9C2F82674036483D9BA3DC /* Pods-TestKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.release.xcconfig"; sourceTree = "<group>"; };
 		54165F4C750FB2433B9312D8 /* Pods-TestKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.debug.xcconfig"; sourceTree = "<group>"; };
 		9E9D83802A16100212F0DBEB /* Pods_TestKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74CD29E1D63FBBE0075F051 /* CBRecommendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBRecommendView.swift; sourceTree = "<group>"; };
+		A74CD2A01D63FF480075F051 /* CBRecommendADCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBRecommendADCell.swift; sourceTree = "<group>"; };
+		A74CD2A11D63FF480075F051 /* CBRecommendADCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBRecommendADCell.xib; sourceTree = "<group>"; };
+		A74CD2A41D6407FC0075F051 /* UIImageView+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Util.swift"; sourceTree = "<group>"; };
+		A74CD2A71D640A200075F051 /* sdefaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sdefaultImage.png; sourceTree = "<group>"; };
+		A74CD2A91D64174E0075F051 /* CBRecommendLikeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBRecommendLikeCell.swift; sourceTree = "<group>"; };
+		A74CD2AA1D64174E0075F051 /* CBRecommendLikeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBRecommendLikeCell.xib; sourceTree = "<group>"; };
 		A74E65631D62A15B00DA290D /* community_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community_normal@2x.png"; sourceTree = "<group>"; };
 		A74E65641D62A15B00DA290D /* community_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community_normal@3x.png"; sourceTree = "<group>"; };
 		A74E65651D62A15B00DA290D /* community_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community_select@2x.png"; sourceTree = "<group>"; };
@@ -204,6 +218,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A74CD2A61D640A200075F051 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				A74CD2A71D640A200075F051 /* sdefaultImage.png */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		A74E65621D62A15B00DA290D /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +312,11 @@
 		A74E65C11D62C61B00DA290D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A74CD29E1D63FBBE0075F051 /* CBRecommendView.swift */,
+				A74CD2A01D63FF480075F051 /* CBRecommendADCell.swift */,
+				A74CD2A11D63FF480075F051 /* CBRecommendADCell.xib */,
+				A74CD2A91D64174E0075F051 /* CBRecommendLikeCell.swift */,
+				A74CD2AA1D64174E0075F051 /* CBRecommendLikeCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -375,6 +402,7 @@
 				A7649F4E1D61751A00BA5B13 /* UIButton+Util.swift */,
 				A74E65931D62A85100DA290D /* Const.swift */,
 				A74E65BC1D62BD7100DA290D /* KTCDownloader.swift */,
+				A74CD2A41D6407FC0075F051 /* UIImageView+Util.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -590,6 +618,7 @@
 		A7649F1F1D6153F200BA5B13 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A74CD2A61D640A200075F051 /* common */,
 				A74E65951D62B9BF00DA290D /* launchImages */,
 				A74E659B1D62B9BF00DA290D /* nav */,
 				A74E65621D62A15B00DA290D /* tabbar */,
@@ -735,6 +764,7 @@
 				A74E657F1D62A15B00DA290D /* home_normal@2x.png in Resources */,
 				A74E657D1D62A15B00DA290D /* community_select@2x.png in Resources */,
 				A74E658B1D62A15B00DA290D /* shike_normal@2x.png in Resources */,
+				A74CD2AC1D64174E0075F051 /* CBRecommendLikeCell.xib in Resources */,
 				A74E65A91D62B9BF00DA290D /* nav_back_black.png in Resources */,
 				A74E65891D62A15B00DA290D /* report_select@2x.png in Resources */,
 				A74E65921D62A15B00DA290D /* shop_select@3x.png in Resources */,
@@ -745,6 +775,8 @@
 				A7649F491D61642100BA5B13 /* Ctrl.json in Resources */,
 				A74E657E1D62A15B00DA290D /* community_select@3x.png in Resources */,
 				A74E658A1D62A15B00DA290D /* report_select@3x.png in Resources */,
+				A74CD2A31D63FF480075F051 /* CBRecommendADCell.xib in Resources */,
+				A74CD2A81D640A200075F051 /* sdefaultImage.png in Resources */,
 				A74E65AD1D62B9BF00DA290D /* saoyisao@2x.png in Resources */,
 				A74E65AE1D62B9BF00DA290D /* saoyisao@3x.png in Resources */,
 				A74E65A61D62B9BF00DA290D /* LaunchImage-800-667h@2x.png in Resources */,
@@ -851,15 +883,19 @@
 				A7649F3D1D615ABA00BA5B13 /* BaseViewController.swift in Sources */,
 				A7649F411D615B2B00BA5B13 /* CommunityViewController.swift in Sources */,
 				A7649F3F1D615AFC00BA5B13 /* CookBookViewController.swift in Sources */,
+				A74CD2AB1D64174E0075F051 /* CBRecommendLikeCell.swift in Sources */,
 				A7649F431D615B6000BA5B13 /* MallViewController.swift in Sources */,
 				A7649F4F1D61751A00BA5B13 /* UIButton+Util.swift in Sources */,
 				A7649F451D615B8C00BA5B13 /* FoodClassViewController.swift in Sources */,
 				A7649F4B1D61731300BA5B13 /* UIView+Util.swift in Sources */,
 				A7649F471D615BB700BA5B13 /* ProfileViewController.swift in Sources */,
 				A7649ED61D6151B400BA5B13 /* AppDelegate.swift in Sources */,
+				A74CD29F1D63FBBE0075F051 /* CBRecommendView.swift in Sources */,
 				A7649F3B1D615A7800BA5B13 /* MainTabBarController.swift in Sources */,
+				A74CD2A51D6407FC0075F051 /* UIImageView+Util.swift in Sources */,
 				A74E65BD1D62BD7100DA290D /* KTCDownloader.swift in Sources */,
 				A7649F4D1D6173B400BA5B13 /* UILabel+Util.swift in Sources */,
+				A74CD2A21D63FF480075F051 /* CBRecommendADCell.swift in Sources */,
 				A74E65941D62A85100DA290D /* Const.swift in Sources */,
 				A74E65C31D62C67400DA290D /* CBRecommendModel.swift in Sources */,
 			);

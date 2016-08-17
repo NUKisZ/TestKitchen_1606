@@ -9,6 +9,9 @@
 import UIKit
 
 class CookBookViewController: BaseViewController {
+    //食材首页的推荐视图
+    private var recommendView:CBRecommendView?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +19,22 @@ class CookBookViewController: BaseViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.redColor()
         createMyNav()
+        createHomePageView()
         downloadRecommendData()
     }
+    
+    //初始化视图
+    func createHomePageView(){
+        automaticallyAdjustsScrollViewInsets = false
+        recommendView = CBRecommendView()
+        view.addSubview(recommendView!)
+        recommendView?.snp_makeConstraints(closure: {
+            [weak self]
+            (make) in
+            make.edges.equalTo(self!.view).inset(UIEdgeInsetsMake(64, 0, 49, 0))
+        })
+    }
+    
     //下载推荐的数据
     func downloadRecommendData(){
         //methodName=SceneHome&token=&user_id=&version=4.5
@@ -62,8 +79,14 @@ extension CookBookViewController:KTCDownloaderDelegate{
         print(error)
     }
     func downloader(downloader: KTCDownloader, didFinishWithData data: NSData?) {
-        let str = NSString(data: data!, encoding: NSUTF8StringEncoding)
-        print(str!)
+        if let jsonData = data{
+            let model = CBRecommendModel.parseModel(jsonData)
+            //显示
+            dispatch_async(dispatch_get_main_queue(), {
+                [weak self] in
+                self!.recommendView?.model = model
+            })
+        }
     }
 }
 
