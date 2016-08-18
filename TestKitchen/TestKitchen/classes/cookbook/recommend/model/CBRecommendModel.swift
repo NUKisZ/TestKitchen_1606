@@ -162,12 +162,12 @@ class  CBRecommendWidgetDataModel: NSObject {
         
         return model
     }
-    
-    
-    
+
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
     }
+    
+    
 }
 
 

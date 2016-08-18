@@ -55,6 +55,11 @@
 		A74E65B01D62B9BF00DA290D /* search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E65A31D62B9BF00DA290D /* search@3x.png */; };
 		A74E65BD1D62BD7100DA290D /* KTCDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E65BC1D62BD7100DA290D /* KTCDownloader.swift */; };
 		A74E65C31D62C67400DA290D /* CBRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E65C21D62C67400DA290D /* CBRecommendModel.swift */; };
+		A752F9EE1D654B9700091B8F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A752F9ED1D654B9700091B8F /* Util.swift */; };
+		A752F9F01D655ADD00091B8F /* CBSearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A752F9EF1D655ADD00091B8F /* CBSearchHeaderView.swift */; };
+		A752F9F41D6561D000091B8F /* search1.png in Resources */ = {isa = PBXBuildFile; fileRef = A752F9F31D6561D000091B8F /* search1.png */; };
+		A752F9F71D65632600091B8F /* CBRedPacketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A752F9F51D65632600091B8F /* CBRedPacketCell.swift */; };
+		A752F9F81D65632600091B8F /* CBRedPacketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A752F9F61D65632600091B8F /* CBRedPacketCell.xib */; };
 		A7649ED61D6151B400BA5B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7649ED51D6151B400BA5B13 /* AppDelegate.swift */; };
 		A7649ED81D6151B400BA5B13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7649ED71D6151B400BA5B13 /* ViewController.swift */; };
 		A7649EDB1D6151B400BA5B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7649ED91D6151B400BA5B13 /* Main.storyboard */; };
@@ -150,6 +155,11 @@
 		A74E65A31D62B9BF00DA290D /* search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@3x.png"; sourceTree = "<group>"; };
 		A74E65BC1D62BD7100DA290D /* KTCDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTCDownloader.swift; sourceTree = "<group>"; };
 		A74E65C21D62C67400DA290D /* CBRecommendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBRecommendModel.swift; sourceTree = "<group>"; };
+		A752F9ED1D654B9700091B8F /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		A752F9EF1D655ADD00091B8F /* CBSearchHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBSearchHeaderView.swift; sourceTree = "<group>"; };
+		A752F9F31D6561D000091B8F /* search1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search1.png; sourceTree = "<group>"; };
+		A752F9F51D65632600091B8F /* CBRedPacketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBRedPacketCell.swift; sourceTree = "<group>"; };
+		A752F9F61D65632600091B8F /* CBRedPacketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBRedPacketCell.xib; sourceTree = "<group>"; };
 		A7649ED21D6151B400BA5B13 /* TestKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7649ED51D6151B400BA5B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7649ED71D6151B400BA5B13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -317,8 +327,27 @@
 				A74CD2A11D63FF480075F051 /* CBRecommendADCell.xib */,
 				A74CD2A91D64174E0075F051 /* CBRecommendLikeCell.swift */,
 				A74CD2AA1D64174E0075F051 /* CBRecommendLikeCell.xib */,
+				A752F9EF1D655ADD00091B8F /* CBSearchHeaderView.swift */,
+				A752F9F51D65632600091B8F /* CBRedPacketCell.swift */,
+				A752F9F61D65632600091B8F /* CBRedPacketCell.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		A752F9F11D6561D000091B8F /* CookBook */ = {
+			isa = PBXGroup;
+			children = (
+				A752F9F21D6561D000091B8F /* homePage */,
+			);
+			path = CookBook;
+			sourceTree = "<group>";
+		};
+		A752F9F21D6561D000091B8F /* homePage */ = {
+			isa = PBXGroup;
+			children = (
+				A752F9F31D6561D000091B8F /* search1.png */,
+			);
+			path = homePage;
 			sourceTree = "<group>";
 		};
 		A7649EC91D6151B400BA5B13 = {
@@ -403,6 +432,7 @@
 				A74E65931D62A85100DA290D /* Const.swift */,
 				A74E65BC1D62BD7100DA290D /* KTCDownloader.swift */,
 				A74CD2A41D6407FC0075F051 /* UIImageView+Util.swift */,
+				A752F9ED1D654B9700091B8F /* Util.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -618,6 +648,7 @@
 		A7649F1F1D6153F200BA5B13 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A752F9F11D6561D000091B8F /* CookBook */,
 				A74CD2A61D640A200075F051 /* common */,
 				A74E65951D62B9BF00DA290D /* launchImages */,
 				A74E659B1D62B9BF00DA290D /* nav */,
@@ -777,6 +808,7 @@
 				A74E658A1D62A15B00DA290D /* report_select@3x.png in Resources */,
 				A74CD2A31D63FF480075F051 /* CBRecommendADCell.xib in Resources */,
 				A74CD2A81D640A200075F051 /* sdefaultImage.png in Resources */,
+				A752F9F41D6561D000091B8F /* search1.png in Resources */,
 				A74E65AD1D62B9BF00DA290D /* saoyisao@2x.png in Resources */,
 				A74E65AE1D62B9BF00DA290D /* saoyisao@3x.png in Resources */,
 				A74E65A61D62B9BF00DA290D /* LaunchImage-800-667h@2x.png in Resources */,
@@ -786,6 +818,7 @@
 				A74E657B1D62A15B00DA290D /* community_normal@2x.png in Resources */,
 				A7649F391D61575B00BA5B13 /* Images.xcassets in Resources */,
 				A74E65881D62A15B00DA290D /* report_normal@3x.png in Resources */,
+				A752F9F81D65632600091B8F /* CBRedPacketCell.xib in Resources */,
 				A74E65AA1D62B9BF00DA290D /* nav_back_white.png in Resources */,
 				A74E658E1D62A15B00DA290D /* shike_select@3x.png in Resources */,
 				A74E65AC1D62B9BF00DA290D /* navBtn_bag.png in Resources */,
@@ -881,11 +914,14 @@
 			files = (
 				A7649ED81D6151B400BA5B13 /* ViewController.swift in Sources */,
 				A7649F3D1D615ABA00BA5B13 /* BaseViewController.swift in Sources */,
+				A752F9F01D655ADD00091B8F /* CBSearchHeaderView.swift in Sources */,
 				A7649F411D615B2B00BA5B13 /* CommunityViewController.swift in Sources */,
 				A7649F3F1D615AFC00BA5B13 /* CookBookViewController.swift in Sources */,
 				A74CD2AB1D64174E0075F051 /* CBRecommendLikeCell.swift in Sources */,
 				A7649F431D615B6000BA5B13 /* MallViewController.swift in Sources */,
 				A7649F4F1D61751A00BA5B13 /* UIButton+Util.swift in Sources */,
+				A752F9F71D65632600091B8F /* CBRedPacketCell.swift in Sources */,
+				A752F9EE1D654B9700091B8F /* Util.swift in Sources */,
 				A7649F451D615B8C00BA5B13 /* FoodClassViewController.swift in Sources */,
 				A7649F4B1D61731300BA5B13 /* UIView+Util.swift in Sources */,
 				A7649F471D615BB700BA5B13 /* ProfileViewController.swift in Sources */,
