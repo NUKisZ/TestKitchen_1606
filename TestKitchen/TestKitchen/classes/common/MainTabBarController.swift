@@ -182,7 +182,7 @@ class MainTabBarController: UITabBarController {
     
     func clickBtn(curBtn:UIButton){
         //1.取消之前选中按钮的状态
-        let lastBtnView = view.viewWithTag(3000 + selectedIndex)
+        let lastBtnView = bgView?.viewWithTag(3000 + selectedIndex)
         if let tmpBtn = lastBtnView{
             let lastBtn = tmpBtn as! UIButton
             let lastView = tmpBtn.viewWithTag(4000)

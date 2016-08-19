@@ -37,6 +37,11 @@ class CBRecommendADCell: UITableViewCell {
                 make.height.equalTo(self!.scrollView)
                 
             })
+            
+            for oldSub in containerView.subviews{
+                oldSub.removeFromSuperview()
+            }
+            
             var lastView:UIView? = nil
             for i in 0..<cnt!{
                 //1.模型对象
