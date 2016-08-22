@@ -68,6 +68,12 @@
 		A760ABE91D66ADD600EF7AD2 /* more_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A760ABE81D66ADD600EF7AD2 /* more_icon.png */; };
 		A760ABEC1D66B15000EF7AD2 /* CBSpecialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A760ABEA1D66B15000EF7AD2 /* CBSpecialCell.swift */; };
 		A760ABED1D66B15000EF7AD2 /* CBSpecialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A760ABEB1D66B15000EF7AD2 /* CBSpecialCell.xib */; };
+		A761411F1D6A906400D69CF4 /* CBSceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761411D1D6A906400D69CF4 /* CBSceneCell.swift */; };
+		A76141201D6A906400D69CF4 /* CBSceneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A761411E1D6A906400D69CF4 /* CBSceneCell.xib */; };
+		A76141231D6A977100D69CF4 /* CBTalentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76141211D6A977100D69CF4 /* CBTalentCell.swift */; };
+		A76141241D6A977100D69CF4 /* CBTalentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76141221D6A977100D69CF4 /* CBTalentCell.xib */; };
+		A76141271D6AA60A00D69CF4 /* CBWorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76141251D6AA60A00D69CF4 /* CBWorksCell.swift */; };
+		A76141281D6AA60A00D69CF4 /* CBWorksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76141261D6AA60A00D69CF4 /* CBWorksCell.xib */; };
 		A7649ED61D6151B400BA5B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7649ED51D6151B400BA5B13 /* AppDelegate.swift */; };
 		A7649ED81D6151B400BA5B13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7649ED71D6151B400BA5B13 /* ViewController.swift */; };
 		A7649EDB1D6151B400BA5B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7649ED91D6151B400BA5B13 /* Main.storyboard */; };
@@ -176,6 +182,12 @@
 		A760ABE81D66ADD600EF7AD2 /* more_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_icon.png; sourceTree = "<group>"; };
 		A760ABEA1D66B15000EF7AD2 /* CBSpecialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBSpecialCell.swift; sourceTree = "<group>"; };
 		A760ABEB1D66B15000EF7AD2 /* CBSpecialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBSpecialCell.xib; sourceTree = "<group>"; };
+		A761411D1D6A906400D69CF4 /* CBSceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBSceneCell.swift; sourceTree = "<group>"; };
+		A761411E1D6A906400D69CF4 /* CBSceneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBSceneCell.xib; sourceTree = "<group>"; };
+		A76141211D6A977100D69CF4 /* CBTalentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTalentCell.swift; sourceTree = "<group>"; };
+		A76141221D6A977100D69CF4 /* CBTalentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBTalentCell.xib; sourceTree = "<group>"; };
+		A76141251D6AA60A00D69CF4 /* CBWorksCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBWorksCell.swift; sourceTree = "<group>"; };
+		A76141261D6AA60A00D69CF4 /* CBWorksCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBWorksCell.xib; sourceTree = "<group>"; };
 		A7649ED21D6151B400BA5B13 /* TestKitchen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKitchen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7649ED51D6151B400BA5B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7649ED71D6151B400BA5B13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -351,6 +363,12 @@
 				A760ABE61D66AB1D00EF7AD2 /* CBHeaderView.swift */,
 				A760ABEA1D66B15000EF7AD2 /* CBSpecialCell.swift */,
 				A760ABEB1D66B15000EF7AD2 /* CBSpecialCell.xib */,
+				A761411D1D6A906400D69CF4 /* CBSceneCell.swift */,
+				A761411E1D6A906400D69CF4 /* CBSceneCell.xib */,
+				A76141211D6A977100D69CF4 /* CBTalentCell.swift */,
+				A76141221D6A977100D69CF4 /* CBTalentCell.xib */,
+				A76141251D6AA60A00D69CF4 /* CBWorksCell.swift */,
+				A76141261D6AA60A00D69CF4 /* CBWorksCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -833,6 +851,7 @@
 				A7649F491D61642100BA5B13 /* Ctrl.json in Resources */,
 				A74E657E1D62A15B00DA290D /* community_select@3x.png in Resources */,
 				A74E658A1D62A15B00DA290D /* report_select@3x.png in Resources */,
+				A76141201D6A906400D69CF4 /* CBSceneCell.xib in Resources */,
 				A74CD2A31D63FF480075F051 /* CBRecommendADCell.xib in Resources */,
 				A74CD2A81D640A200075F051 /* sdefaultImage.png in Resources */,
 				A752F9F41D6561D000091B8F /* search1.png in Resources */,
@@ -840,6 +859,7 @@
 				A74E65AE1D62B9BF00DA290D /* saoyisao@3x.png in Resources */,
 				A74E65A61D62B9BF00DA290D /* LaunchImage-800-667h@2x.png in Resources */,
 				A74E65811D62A15B00DA290D /* home_select@2x.png in Resources */,
+				A76141241D6A977100D69CF4 /* CBTalentCell.xib in Resources */,
 				A74E65901D62A15B00DA290D /* shop_normal@3x.png in Resources */,
 				A74E658F1D62A15B00DA290D /* shop_normal@2x.png in Resources */,
 				A74E657B1D62A15B00DA290D /* community_normal@2x.png in Resources */,
@@ -867,6 +887,7 @@
 				A7649F311D61554800BA5B13 /* AppIcon60x60@2x.png in Resources */,
 				A7649F321D61554800BA5B13 /* AppIcon60x60@3x.png in Resources */,
 				A760ABE41D66994E00EF7AD2 /* play-A@2x.png in Resources */,
+				A76141281D6AA60A00D69CF4 /* CBWorksCell.xib in Resources */,
 				A74E65871D62A15B00DA290D /* report_normal@2x.png in Resources */,
 				A7649F2E1D61554800BA5B13 /* AppIcon29x29@3x.png in Resources */,
 			);
@@ -956,9 +977,12 @@
 				A7649F451D615B8C00BA5B13 /* FoodClassViewController.swift in Sources */,
 				A7649F4B1D61731300BA5B13 /* UIView+Util.swift in Sources */,
 				A7649F471D615BB700BA5B13 /* ProfileViewController.swift in Sources */,
+				A76141271D6AA60A00D69CF4 /* CBWorksCell.swift in Sources */,
 				A7649ED61D6151B400BA5B13 /* AppDelegate.swift in Sources */,
 				A74CD29F1D63FBBE0075F051 /* CBRecommendView.swift in Sources */,
+				A761411F1D6A906400D69CF4 /* CBSceneCell.swift in Sources */,
 				A7649F3B1D615A7800BA5B13 /* MainTabBarController.swift in Sources */,
+				A76141231D6A977100D69CF4 /* CBTalentCell.swift in Sources */,
 				A74CD2A51D6407FC0075F051 /* UIImageView+Util.swift in Sources */,
 				A74E65BD1D62BD7100DA290D /* KTCDownloader.swift in Sources */,
 				A7649F4D1D6173B400BA5B13 /* UILabel+Util.swift in Sources */,

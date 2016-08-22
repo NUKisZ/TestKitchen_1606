@@ -22,6 +22,10 @@ class CBRedPacketCell: UITableViewCell {
     }
     //显示图片
     func showData(){
+        for sub in scrollView.subviews{
+            sub.removeFromSuperview()
+        }
+        
         scrollView.showsHorizontalScrollIndicator = false
         //1.容器视图
         let container = UIView.createView()

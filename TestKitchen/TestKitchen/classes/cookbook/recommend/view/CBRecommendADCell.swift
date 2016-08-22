@@ -23,11 +23,19 @@ class CBRecommendADCell: UITableViewCell {
     }
     
     func showData(){
+        for sub in scrollView.subviews{
+            sub.removeFromSuperview()
+        }
+        
         let cnt = bannerArray?.count
         if cnt > 0{
             //
             //0.添加一个容器视图
             let containerView = UIView.createView()
+            
+            for oldSub in scrollView.subviews{
+                oldSub.removeFromSuperview()
+            }
             scrollView.addSubview(containerView)
             //设置约束
             containerView.snp_makeConstraints(closure: {
@@ -38,9 +46,9 @@ class CBRecommendADCell: UITableViewCell {
                 
             })
             
-            for oldSub in containerView.subviews{
-                oldSub.removeFromSuperview()
-            }
+//            for oldSub in containerView.subviews{
+//                oldSub.removeFromSuperview()
+//            }
             
             var lastView:UIView? = nil
             for i in 0..<cnt!{
