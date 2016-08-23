@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7346C4250D025A8A7337E7A9 /* Pods_TestKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9D83802A16100212F0DBEB /* Pods_TestKitchen.framework */; };
+		A7167E981D6BDABB0004B452 /* CBSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7167E961D6BDABB0004B452 /* CBSubjectCell.swift */; };
+		A7167E991D6BDABB0004B452 /* CBSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7167E971D6BDABB0004B452 /* CBSubjectCell.xib */; };
+		A7167E9F1D6BEA380004B452 /* CBMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7167E9E1D6BEA380004B452 /* CBMaterialModel.swift */; };
+		A7167EA11D6BF6F40004B452 /* CBMaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7167EA01D6BF6F40004B452 /* CBMaterialView.swift */; };
+		A7167EA31D6BFC630004B452 /* KTCSegmentCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7167EA21D6BFC630004B452 /* KTCSegmentCtrl.swift */; };
 		A74CD29F1D63FBBE0075F051 /* CBRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74CD29E1D63FBBE0075F051 /* CBRecommendView.swift */; };
 		A74CD2A21D63FF480075F051 /* CBRecommendADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74CD2A01D63FF480075F051 /* CBRecommendADCell.swift */; };
 		A74CD2A31D63FF480075F051 /* CBRecommendADCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74CD2A11D63FF480075F051 /* CBRecommendADCell.xib */; };
@@ -122,6 +127,11 @@
 		4A9C2F82674036483D9BA3DC /* Pods-TestKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.release.xcconfig"; sourceTree = "<group>"; };
 		54165F4C750FB2433B9312D8 /* Pods-TestKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKitchen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestKitchen/Pods-TestKitchen.debug.xcconfig"; sourceTree = "<group>"; };
 		9E9D83802A16100212F0DBEB /* Pods_TestKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7167E961D6BDABB0004B452 /* CBSubjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBSubjectCell.swift; sourceTree = "<group>"; };
+		A7167E971D6BDABB0004B452 /* CBSubjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBSubjectCell.xib; sourceTree = "<group>"; };
+		A7167E9E1D6BEA380004B452 /* CBMaterialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBMaterialModel.swift; sourceTree = "<group>"; };
+		A7167EA01D6BF6F40004B452 /* CBMaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBMaterialView.swift; sourceTree = "<group>"; };
+		A7167EA21D6BFC630004B452 /* KTCSegmentCtrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTCSegmentCtrl.swift; sourceTree = "<group>"; };
 		A74CD29E1D63FBBE0075F051 /* CBRecommendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBRecommendView.swift; sourceTree = "<group>"; };
 		A74CD2A01D63FF480075F051 /* CBRecommendADCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBRecommendADCell.swift; sourceTree = "<group>"; };
 		A74CD2A11D63FF480075F051 /* CBRecommendADCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBRecommendADCell.xib; sourceTree = "<group>"; };
@@ -256,6 +266,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A7167E9A1D6BE9E70004B452 /* foodMaterial */ = {
+			isa = PBXGroup;
+			children = (
+				A7167E9B1D6BE9E70004B452 /* controller */,
+				A7167E9C1D6BE9E70004B452 /* model */,
+				A7167E9D1D6BE9E70004B452 /* view */,
+			);
+			path = foodMaterial;
+			sourceTree = "<group>";
+		};
+		A7167E9B1D6BE9E70004B452 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A7167E9C1D6BE9E70004B452 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A7167E9E1D6BEA380004B452 /* CBMaterialModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A7167E9D1D6BE9E70004B452 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A7167EA01D6BF6F40004B452 /* CBMaterialView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		A74CD2A61D640A200075F051 /* common */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +412,8 @@
 				A76141221D6A977100D69CF4 /* CBTalentCell.xib */,
 				A76141251D6AA60A00D69CF4 /* CBWorksCell.swift */,
 				A76141261D6AA60A00D69CF4 /* CBWorksCell.xib */,
+				A7167E961D6BDABB0004B452 /* CBSubjectCell.swift */,
+				A7167E971D6BDABB0004B452 /* CBSubjectCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -475,6 +520,7 @@
 				A74E65BC1D62BD7100DA290D /* KTCDownloader.swift */,
 				A74CD2A41D6407FC0075F051 /* UIImageView+Util.swift */,
 				A752F9ED1D654B9700091B8F /* Util.swift */,
+				A7167EA21D6BFC630004B452 /* KTCSegmentCtrl.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -522,6 +568,7 @@
 		A7649F0A1D6153F200BA5B13 /* cookbook */ = {
 			isa = PBXGroup;
 			children = (
+				A7167E9A1D6BE9E70004B452 /* foodMaterial */,
 				A74E65BE1D62C61B00DA290D /* recommend */,
 				A7649F0B1D6153F200BA5B13 /* homePage */,
 			);
@@ -858,6 +905,7 @@
 				A74E65AD1D62B9BF00DA290D /* saoyisao@2x.png in Resources */,
 				A74E65AE1D62B9BF00DA290D /* saoyisao@3x.png in Resources */,
 				A74E65A61D62B9BF00DA290D /* LaunchImage-800-667h@2x.png in Resources */,
+				A7167E991D6BDABB0004B452 /* CBSubjectCell.xib in Resources */,
 				A74E65811D62A15B00DA290D /* home_select@2x.png in Resources */,
 				A76141241D6A977100D69CF4 /* CBTalentCell.xib in Resources */,
 				A74E65901D62A15B00DA290D /* shop_normal@3x.png in Resources */,
@@ -963,6 +1011,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7649ED81D6151B400BA5B13 /* ViewController.swift in Sources */,
+				A7167E9F1D6BEA380004B452 /* CBMaterialModel.swift in Sources */,
 				A760ABE01D66943400EF7AD2 /* CBRecommendNewCell.swift in Sources */,
 				A7649F3D1D615ABA00BA5B13 /* BaseViewController.swift in Sources */,
 				A752F9F01D655ADD00091B8F /* CBSearchHeaderView.swift in Sources */,
@@ -976,14 +1025,17 @@
 				A752F9EE1D654B9700091B8F /* Util.swift in Sources */,
 				A7649F451D615B8C00BA5B13 /* FoodClassViewController.swift in Sources */,
 				A7649F4B1D61731300BA5B13 /* UIView+Util.swift in Sources */,
+				A7167E981D6BDABB0004B452 /* CBSubjectCell.swift in Sources */,
 				A7649F471D615BB700BA5B13 /* ProfileViewController.swift in Sources */,
 				A76141271D6AA60A00D69CF4 /* CBWorksCell.swift in Sources */,
 				A7649ED61D6151B400BA5B13 /* AppDelegate.swift in Sources */,
 				A74CD29F1D63FBBE0075F051 /* CBRecommendView.swift in Sources */,
 				A761411F1D6A906400D69CF4 /* CBSceneCell.swift in Sources */,
 				A7649F3B1D615A7800BA5B13 /* MainTabBarController.swift in Sources */,
+				A7167EA11D6BF6F40004B452 /* CBMaterialView.swift in Sources */,
 				A76141231D6A977100D69CF4 /* CBTalentCell.swift in Sources */,
 				A74CD2A51D6407FC0075F051 /* UIImageView+Util.swift in Sources */,
+				A7167EA31D6BFC630004B452 /* KTCSegmentCtrl.swift in Sources */,
 				A74E65BD1D62BD7100DA290D /* KTCDownloader.swift in Sources */,
 				A7649F4D1D6173B400BA5B13 /* UILabel+Util.swift in Sources */,
 				A74CD2A21D63FF480075F051 /* CBRecommendADCell.swift in Sources */,

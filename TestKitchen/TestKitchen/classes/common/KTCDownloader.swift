@@ -11,6 +11,10 @@ import Alamofire
 
 public enum KTCDownloaderType:Int{
     case Default = 10
+    
+    case Recommend              //食材首页的推荐
+    case FoodMaterial           //食材
+    case Category               //首页的分类
 }
 
 
@@ -29,8 +33,13 @@ class KTCDownloader: NSObject {
     var type:KTCDownloaderType = .Default
     //Post请求下载数据的方法
     func postWithUrl(urlString:String,params:Dictionary<String,String>?){
+        //"token":"","user_id":"","version":"4.5"
+        var newParam = params
+        newParam!["token"] = ""
+        newParam!["user_id"] = ""
+        newParam!["version"] = "4.5"
         
-        Alamofire.request(.POST, urlString, parameters: params, encoding: ParameterEncoding.URL, headers: nil).responseData {
+        Alamofire.request(.POST, urlString, parameters: newParam, encoding: ParameterEncoding.URL, headers: nil).responseData {
             (response) in
             switch response.result{
             case .Failure(let error):

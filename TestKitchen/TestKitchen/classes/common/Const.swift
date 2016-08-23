@@ -12,7 +12,7 @@ import UIKit
 public let kScreenWidth = UIScreen.mainScreen().bounds.size.width
 public let kScreenHeight = UIScreen.mainScreen().bounds.size.height
 
-
+public let dImage = UIImage(named: "sdefaultImage")
 //首页推荐点击事件的类型
 
 
