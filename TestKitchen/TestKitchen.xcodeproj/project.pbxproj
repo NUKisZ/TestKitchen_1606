@@ -104,6 +104,7 @@
 		A7649F4B1D61731300BA5B13 /* UIView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7649F4A1D61731300BA5B13 /* UIView+Util.swift */; };
 		A7649F4D1D6173B400BA5B13 /* UILabel+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7649F4C1D6173B400BA5B13 /* UILabel+Util.swift */; };
 		A7649F4F1D61751A00BA5B13 /* UIButton+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7649F4E1D61751A00BA5B13 /* UIButton+Util.swift */; };
+		A77E22781D6D3B030009988A /* CBMaterialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E22771D6D3B030009988A /* CBMaterialCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +230,7 @@
 		A7649F4A1D61731300BA5B13 /* UIView+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Util.swift"; sourceTree = "<group>"; };
 		A7649F4C1D6173B400BA5B13 /* UILabel+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Util.swift"; sourceTree = "<group>"; };
 		A7649F4E1D61751A00BA5B13 /* UIButton+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Util.swift"; sourceTree = "<group>"; };
+		A77E22771D6D3B030009988A /* CBMaterialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBMaterialCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				A7167EA01D6BF6F40004B452 /* CBMaterialView.swift */,
+				A77E22771D6D3B030009988A /* CBMaterialCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1026,6 +1029,7 @@
 				A7649F451D615B8C00BA5B13 /* FoodClassViewController.swift in Sources */,
 				A7649F4B1D61731300BA5B13 /* UIView+Util.swift in Sources */,
 				A7167E981D6BDABB0004B452 /* CBSubjectCell.swift in Sources */,
+				A77E22781D6D3B030009988A /* CBMaterialCell.swift in Sources */,
 				A7649F471D615BB700BA5B13 /* ProfileViewController.swift in Sources */,
 				A76141271D6AA60A00D69CF4 /* CBWorksCell.swift in Sources */,
 				A7649ED61D6151B400BA5B13 /* AppDelegate.swift in Sources */,

@@ -9,6 +9,10 @@
 import UIKit
 
 class CookBookViewController: BaseViewController {
+    
+    //滚动视图
+    //
+    var scrollView:UIScrollView?
     //食材首页的推荐视图
     private var recommendView:CBRecommendView?
     //首页的食材视图
@@ -28,28 +32,32 @@ class CookBookViewController: BaseViewController {
         createHomePageView()
         downloadRecommendData()
         downloadFoodData()
+        downloadCategoryData()
     }
     
     //初始化视图
     func createHomePageView(){
         automaticallyAdjustsScrollViewInsets = false
         //创建一个滚动视图
-        let scrollView = UIScrollView()
-        view.addSubview(scrollView)
-        scrollView.pagingEnabled = true
-        scrollView.showsHorizontalScrollIndicator = false
+        scrollView = UIScrollView()
+        view.addSubview(scrollView!)
+        scrollView?.delegate = self
+        scrollView!.pagingEnabled = true
+        scrollView!.showsHorizontalScrollIndicator = false
         
-        scrollView.snp_makeConstraints {
+        scrollView!.snp_makeConstraints {
             [weak self]
             (make) in
             make.edges.equalTo((self?.view)!).inset(UIEdgeInsetsMake(64, 0, 49, 0))
         }
         //创建容器视图
         let containerView = UIView.createView()
-        scrollView.addSubview(containerView)
-        containerView.snp_makeConstraints { (make) in
-            make.edges.equalTo(scrollView)
-            make.height.equalTo(scrollView)
+        scrollView!.addSubview(containerView)
+        containerView.snp_makeConstraints {
+            [weak self]
+            (make) in
+            make.edges.equalTo(self!.scrollView!)
+            make.height.equalTo(self!.scrollView!)
         }
         //1.推荐视图
         recommendView = CBRecommendView()
@@ -108,10 +116,21 @@ class CookBookViewController: BaseViewController {
         downloader.type = KTCDownloaderType.FoodMaterial
         downloader.postWithUrl(kHostUrl, params: dict)
     }
-    
+    func downloadCategoryData(){
+        //methodName=CategoryIndex&token=&user_id=&version=4.32
+        let dict = ["methodName":"CategoryIndex"]
+        let downloader = KTCDownloader()
+        downloader.delegate = self
+        downloader.type = KTCDownloaderType.Category
+        downloader.postWithUrl(kHostUrl, params: dict)
+        
+        
+        
+    }
     func createMyNav(){
         //标题位置
         segCtrl = KTCSegmentCtrl(frame: CGRectMake(80, 0, kScreenWidth - 80 * 2, 44), titleNames: ["推荐","食材","分类"])
+        segCtrl?.delegate = self
         navigationItem.titleView = segCtrl
         
         addNavBtn("saoyisao", target: self, action: #selector(scanAction), isLeft: true)
@@ -160,17 +179,35 @@ extension CookBookViewController:KTCDownloaderDelegate{
             if let jsonData = data{
                 let model = CBMaterialModel.parseJson(jsonData)
                 dispatch_async(dispatch_get_main_queue(), { 
-                    print(model)
+                    [weak self]in
+                    self!.foodView?.model = model
                 })
             }
         }else if downloader.type == .Category{
-            
+            if let jsonData = data{
+                
+                let model = CBMaterialModel.parseJson(jsonData)
+                dispatch_async(dispatch_get_main_queue(), { 
+                    [weak self]in
+                    self?.categoryView?.model = model
+                })
+            }
         }
         
     }
 }
-
-
+extension CookBookViewController:KTCSegmentCtrlDelegate{
+    func didSelectSegCtrl(segCtrl: KTCSegmentCtrl, atIndex index: Int) {
+        scrollView?.setContentOffset(CGPointMake(kScreenWidth*CGFloat(index), 0), animated: true)
+        
+    }
+}
+extension CookBookViewController:UIScrollViewDelegate{
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        segCtrl?.selectIndex = index
+    }
+}
 
 
 
