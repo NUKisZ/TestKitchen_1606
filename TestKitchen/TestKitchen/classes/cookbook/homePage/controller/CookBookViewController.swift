@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CookBookViewController: BaseViewController {
+class CookBookViewController: KTCHomeViewController {
     
     //滚动视图
     //
@@ -23,11 +23,31 @@ class CookBookViewController: BaseViewController {
     //导航的标题视图
     private var segCtrl :KTCSegmentCtrl?
 
+    //显示tabbar
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDele = UIApplication.sharedApplication().delegate as! AppDelegate
+        let ctrl = appDele.window?.rootViewController
+        if ctrl?.isKindOfClass(MainTabBarController.self) == true{
+            let mainTabBarCtrl = ctrl as! MainTabBarController
+            mainTabBarCtrl.showTabbar()
+        }
+    }
+    //隐藏
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        let appDele = UIApplication.sharedApplication().delegate as! AppDelegate
+        let ctrl = appDele.window?.rootViewController
+        if ctrl?.isKindOfClass(MainTabBarController.self) == true{
+            let mainTabBarCtrl = ctrl as! MainTabBarController
+            mainTabBarCtrl.hideTabar()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.redColor()
+        self.view.backgroundColor = UIColor.whiteColor()
         createMyNav()
         createHomePageView()
         downloadRecommendData()
@@ -143,6 +163,44 @@ class CookBookViewController: BaseViewController {
         
     }
 
+    //MARK:首页推荐的方法
+    //app://food_course_series#98#
+    //食材的课程分集显示
+    func gotoFoodCoursePage(link:String){
+        let startRange = NSString(string: link).rangeOfString("#")
+        let endRange = NSString(string: link).rangeOfString("#", options: NSStringCompareOptions.BackwardsSearch, range: NSMakeRange(0, link.characters.count), locale: nil)
+        let id = NSString(string: link).substringWithRange(NSMakeRange(startRange.location+1, endRange.location-startRange.location-1))
+        let foodCourseCtrl = FoodCourseViewController()
+        foodCourseCtrl.serialId = id
+        navigationController?.pushViewController(foodCourseCtrl, animated: true)
+    }
+    
+    //MARK:首页推荐的方法
+    //显示首页推荐的数据
+    func showRecommendData(model:CBRecommendModel){
+        recommendView?.model = model
+        //点击事件
+        recommendView?.clickClosure = {
+            [weak self]
+            (title:String?,link:String)in
+            if link.hasPrefix("app://food_course_series") == true{
+                //app://food_course_series#98#
+                //食材的课程分集显示
+                
+                self?.gotoFoodCoursePage(link)
+                
+                
+                
+            }
+            
+        }
+    }
+    //MARK:首页食材的方法
+    
+    
+    //MARK:首页分类的方法
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -172,7 +230,12 @@ extension CookBookViewController:KTCDownloaderDelegate{
                 //显示
                 dispatch_async(dispatch_get_main_queue(), {
                     [weak self] in
-                    self!.recommendView?.model = model
+                
+                    self?.showRecommendData(model)
+                    
+                    
+                    //点击事件
+                    
                     })
             }
         }else if downloader.type == KTCDownloaderType.FoodMaterial{

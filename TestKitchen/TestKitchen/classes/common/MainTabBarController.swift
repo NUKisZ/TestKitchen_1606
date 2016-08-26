@@ -74,20 +74,7 @@ class MainTabBarController: UITabBarController {
         }else{
             ctrlNames = ["CookBookViewController","CommunityViewController","MallViewController","FoodClassViewController","ProfileViewController"]
             
-            //home_normal
-            //home_select
             
-            //community_normal
-            //community_select
-            
-            //shop_normal
-            //shop_select
-            
-            //shike_normal
-            //shike_select
-            
-            //mine_normal
-            //mine_select
             
             titleNames = ["食材","社区","商城","食课","我的"]
             imageNames = ["home","community","shop","shike","mine"]
@@ -112,6 +99,7 @@ class MainTabBarController: UITabBarController {
             vCtrlArray.append(navCtrl)
         }
         self.viewControllers = vCtrlArray
+        tabBar.hidden = true
         //自定制TabBar
         createCustomTabbar(titleNames, imageNames: imageNames)
         
@@ -205,6 +193,24 @@ class MainTabBarController: UITabBarController {
         
         
     }
+    
+    //显示tabbar
+    func showTabbar(){
+        UIView.animateWithDuration(0.05) {
+            [weak self]
+            in
+            self!.bgView?.hidden = false
+        }
+    }
+    //隐藏tabbar
+    func hideTabar(){
+        UIView.animateWithDuration(0.05) {
+            [weak self]
+            in
+            self!.bgView?.hidden = true
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

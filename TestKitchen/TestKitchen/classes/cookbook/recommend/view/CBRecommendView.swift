@@ -9,6 +9,10 @@
 import UIKit
 
 class CBRecommendView: UIView {
+    //点击事件
+    var clickClosure:CBCellClosure?
+    
+    
     //显示数据
     var model:CBRecommendModel?{
         didSet{
@@ -130,7 +134,7 @@ extension CBRecommendView:UITableViewDelegate,UITableViewDataSource{
         var cell = UITableViewCell()
         if indexPath.section == 0{
             if model?.data?.banner?.count > 0 {
-                cell = CBRecommendADCell.createADCellFor(tableView, atIndexPath: indexPath, withModel: model!)
+                cell = CBRecommendADCell.createADCellFor(tableView, atIndexPath: indexPath, withModel: model!,cellClosure: clickClosure)
             }
         }else{
             //其他情况

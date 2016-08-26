@@ -14,6 +14,8 @@ class CBRecommendADCell: UITableViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     
 
+    //图片的点击事件
+    var clickClosure:CBCellClosure?
     
     var bannerArray:Array<CBRecommendBannerModel>?{
         didSet{
@@ -46,10 +48,6 @@ class CBRecommendADCell: UITableViewCell {
                 
             })
             
-//            for oldSub in containerView.subviews{
-//                oldSub.removeFromSuperview()
-//            }
-            
             var lastView:UIView? = nil
             for i in 0..<cnt!{
                 //1.模型对象
@@ -69,6 +67,15 @@ class CBRecommendADCell: UITableViewCell {
                 let image = UIImage(named: "sdefaultImage")
                 tmpImageView.kf_setImageWithURL(url, placeholderImage: image, optionsInfo: nil, progressBlock: nil, completionHandler: nil)
                 containerView.addSubview(tmpImageView)
+                
+                
+                //添加手势
+                tmpImageView.userInteractionEnabled = true
+                tmpImageView.tag = 500 + i
+                let g = UITapGestureRecognizer(target: self, action: #selector(tapImage(_:)))
+                tmpImageView.addGestureRecognizer(g)
+                
+                
                 //约束
                 tmpImageView.snp_makeConstraints(closure: { (make) in
                     make.top.bottom.equalTo(containerView)
@@ -95,12 +102,31 @@ class CBRecommendADCell: UITableViewCell {
         }
         
     }
+    
+    func tapImage(g:UIGestureRecognizer){
+        let index = (g.view?.tag)! - 500
+        
+        //获取模型对象
+        let imageModel = bannerArray![index]
+        
+        //要将点击事件传到视图控制器
+        clickClosure!(nil,imageModel.banner_link!)
+        
+    }
+    
     func pageAction(index:UIPageControl){
         print(index.currentPage)
     }
     
     //创建cell的方法
-    class func createADCellFor(tableView:UITableView,atIndexPath indexPath:NSIndexPath,withModel model:CBRecommendModel)->UITableViewCell{
+    /*
+     tableView:cell所在的表格
+     indexPath:cell在表格的位置
+     model:cell的显示数据
+     cellClosure:图片的点击事件
+     
+     */
+    class func createADCellFor(tableView:UITableView,atIndexPath indexPath:NSIndexPath,withModel model:CBRecommendModel,cellClosure:CBCellClosure?)->UITableViewCell{
         let cellId = "recommendADCellId"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellId)as? CBRecommendADCell
         if cell == nil {
@@ -108,7 +134,7 @@ class CBRecommendADCell: UITableViewCell {
         }
         
         cell?.bannerArray = model.data?.banner
-        
+        cell?.clickClosure = cellClosure
         return cell!
     }
     
